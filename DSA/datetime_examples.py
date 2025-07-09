@@ -1,0 +1,11 @@
+import datetime
+x = datetime.date(2024,9,5)
+delta = datetime.timedelta(days=5)
+print(x+delta)
+print(x)
+print(x.year)
+print(x.month)
+print(x.day)
+print(x.weekday())
+p=x.weekday()
+print(x.strftime("%a"))
