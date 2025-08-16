@@ -1,4 +1,5 @@
 class Solution:
+
     def majorityElement(self, a: List[int]) -> int:
         c = 0
         n = len(a)
