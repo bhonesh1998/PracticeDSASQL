@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/bulb-switcher/?envType=problem-list-v2&envId=math
+
 import math
 class Solution:
     def bulbSwitch(self, n: int) -> int:
