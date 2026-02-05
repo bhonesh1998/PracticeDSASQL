@@ -1,0 +1,27 @@
+# Write your MySQL query statement below
+
+select name,population,area from
+World
+where area >= 3000000
+or
+population >= 25000000
+
+
+
+-- spark sql
+
+%scala
+val data = Seq(
+  ("Afghanistan", "Asia", 652230, 25500100, 20343000000L),
+  ("Albania", "Europe", 28748, 2831741, 12960000000L),
+  ("Algeria", "Africa", 2381741, 37100000, 188681000000L),
+  ("Andorra", "Europe", 468, 78115, 3712000000L),
+  ("Angola", "Africa", 1246700, 20609294, 100990000000L)
+)
+
+// Convert to DataFrame
+val df = data.toDF("country", "continent", "area", "population", "gdp")
+.filter($"area">=3000000 or $"population">=25000000)
+
+df.show(2,false)
+
