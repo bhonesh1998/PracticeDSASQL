@@ -1,34 +1,41 @@
-class item:
-
-    def __init__(self, name:str, quantity:int ,price:float):
+class animal:  # parent class
+    def __init__(self,name,color):
         self.name = name
-        self.quantity=quantity
-        self.price = price
+        self.color = color
 
-    def calculate_total_price(self):
-        return self.quantity * self.price
-
-
-class phone(item):
-    pass
-
-    #
-    # def calculate_total_price(self):
-    #     return 10 * self.quantity * self.price
+    def sound(self):
+        print("General sound")
 
 
+class dog(animal):    # child class
 
-lava = phone("lava",1,200)
-print(lava.calculate_total_price())
+    def walk(self):
+        print("I am walking")
+
+    def sound(self):
+        print("Bark ! ")
+
+class cat(animal):
+
+    def sound(self):
+        print("meow ! ")
 
 
+dog1 = dog("tom","black")
+
+print(dog1.name)
+print(dog1.color)
+
+dog2 = animal("tom","black")
+
+dog2.sound()
+
+dog1.sound()
+dog1.walk()
 
 
-# item1 = item("iphone",10,2)
-#
-# cost = item1.calculate_total_price()
-#
-# print(cost)
+cat1 = cat("xyz","white")
 
+cat1.sound()
 
 
